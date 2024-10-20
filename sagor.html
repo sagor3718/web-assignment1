@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page With Grid Layout</title>
+
+    <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
+     <style>
+/* Basic CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+}
+.icon1{
+    width: 25px;
+    height: 25px;
+    padding-top: 5px;
+
+}
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar .nav-links {
+    list-style-type: none;
+}
+.logo:hover{
+    color: red;
+    font: size 30px;
+}
+.navbar .nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ff6f61;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('images/cover1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 90% 55%;
+
+
+}
+.hero h1 {
+    color:ghostwhite;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 1px 5px 5px black;
+}
+
+.hero p {
+    color: floralwhite;
+    font-size: 18px;
+    margin-bottom: 30px;
+    
+    
+}
+
+.hero .cta-btn {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero .cta-btn:hover {
+    background-color: #ff4a36;
+}
+
+/* Cards Section */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+.card:hover{
+    box-shadow:0 30px 40px  rgba(0, 0, 0, 0.1) !important;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff4a36;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+     </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Cloth Store <img class="icon1" src="images/icon.jpg" alt=""></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h1 >Welcome to Cloth Store</h1>
+            <p>Your one-stop solution for all things awesome!</p>
+            <button class="cta-btn">Get Started</button>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="cards-container">
+            <div class="card">
+                <img src="images/picture1.jpg" alt="Card 1">
+                <h3>Hoodie</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ullam!</p>
+            </div>
+            <div class="card">
+                <img src="images/picture2.jpg" alt="Card 2">
+                <h3>Male Hoodie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dignissimos.</p>
+            </div>
+            <div class="card">
+                <img src="images/picture3.jpg" alt="Card 3">
+                <h3>Female Hoodie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, voluptas.</p>
+            </div>
+            <div class="card">
+                <img src="images/special5.jpg" alt="Card 4">
+                <h3>Sweat Shirt</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum?</p>
+            </div>
+            <div class="card">
+                <img src="images/special3.jpg" alt="Card 5">
+                <h3>Full Sleave T-shirt</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ullam!</p>
+            </div>
+            <div class="card">
+                <img src="images/special1.jpg" alt="Card 6">
+                <h3>Full Sleave T-shirt</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dignissimos.</p>
+            </div>
+            <div class="card">
+                <img src="images/picture7.jpg" alt="Card 7">
+                <h3>White Denim</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, voluptas.</p>
+            </div>
+            <div class="card">
+                <img src="images/picture8.jpg" alt="Card 8">
+                <h3>Denim</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum?</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 My Clothing Brand. All Rights Reserved.</p>
+        <p>Contact us: <a href="mailto:info@mybrand.com">mdsagorbd3718@gmail.com</a> | Phone: +8801789252543</p>
+        <p>Follow us on: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
